@@ -1,122 +1,108 @@
+import tempfile
 import pytest
 from fastapi.testclient import TestClient
-from sqlalchemy import StaticPool, create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
-from database import get_session
-from main import app
+from sqlalchemy.future import select
+from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from models import TodoORM
+from database import engine, get_session
+from main import app
+import pytest_asyncio
 
-# Используем асинхронный SQLite
-DATABASE_URL = 'sqlite+aiosqlite:///task.db'
+
+DATABASE_URL = f"sqlite+aiosqlite:///{tempfile.mktemp()}"
 engine = create_async_engine(DATABASE_URL, echo=True)
 
-# Используем асинхронную сессию для тестов
-TestingSessionLocal = sessionmaker(
-    autocommit=False,
-    autoflush=False,
-    bind=engine,
-    class_=AsyncSession  # Указываем использование AsyncSession
-)
 
-client = TestClient(app)
+new_session = async_sessionmaker(engine, expire_on_commit=False, class_=AsyncSession)
 
-# Асинхронная сессия для тестов
-async def override_get_db():
-    async with TestingSessionLocal() as db:
-        yield db
 
-# Переопределяем зависимость get_db в приложении FastAPI
-app.dependency_overrides[get_session] = override_get_db
+async def setup_database():
+    # Настройка тестовой базы данных
+    async with engine.begin() as conn:
+        await conn.run_sync(TodoORM.metadata.create_all)  # Создаем таблицы
+
+
+@pytest.fixture
+def client():
+    return TestClient(app)
+
+
+@pytest_asyncio.fixture(scope="function")
+async def db_session():
+    # Настройка тестовой базы данных
+    await setup_database()
+    async for session in new_session():
+        yield session  # Возвращаем сессию для тестов
+
 
 @pytest.mark.asyncio
-async def test_add_task():
-    new_task = {
+async def test_create_task(client: TestClient, db_session: AsyncSession):
+    # Тест на создание задачи
+    new_task_data = {
         "name": "Test Task",
         "description": "This is a test task."
     }
 
-    # Отправка POST-запроса для добавления задачи
-    response = client.post("/tasks", json=new_task)
-
-    # Проверка успешности добавления задачи
+    response = client.post("/tasks", json=new_task_data)
     assert response.status_code == 200
-    response_json = response.json()
+    data = response.json()
+    assert data["ok"] is True
+    assert "task_id" in data
 
-    # Проверка, что task_id присутствует в ответе
-    assert "task_id" in response_json
-    assert response_json["ok"] is True
-
-    task_id = response_json["task_id"]
-
-    # Теперь проверим, что задача добавлена и можем получить её через GET-запрос
-    response = client.get(f"/tasks/{task_id}")
-
-    # Проверка, что задача существует
-    assert response.status_code == 200
-    response_json = response.json()
-
-    # Проверка, что данные задачи корректны
-    assert response_json["Status"] == "Success"
-    assert response_json["Task"]["id"] == task_id
-    assert response_json["Task"]["title"] == new_task["name"]
-    assert response_json["Task"]["description"] == new_task["description"]
-
+    task_id = data["task_id"]
+    # Проверяем, что задача создана в базе
+    result = await db_session.execute(select(TodoORM).filter(TodoORM.id == task_id))
+    task = result.scalars().first()
+    assert task is not None
+    assert task.title == new_task_data["name"]
+    assert task.description == new_task_data["description"]
 
 @pytest.mark.asyncio
-async def test_update_task():
-    new_task = {
-        "name": "Test Task",
-        "description": "This is a test task."
-    }
+async def test_get_tasks(client: TestClient, db_session: AsyncSession):
+    # Тест на получение всех задач
+    task_data_1 = {"name": "Test Task 1", "description": "First test task."}
+    task_data_2 = {"name": "Test Task 2", "description": "Second test task."}
 
-    # Создаем задачу
-    response = client.post("/tasks", json=new_task)
-    response_json = response.json()
-    task_id = response_json["task_id"]
-
-    # Обновляем задачу
-    updated_task = {
-        "name": "Updated Task",
-        "description": "This is the updated task description."
-    }
-    response = client.put(f"/tasks/{task_id}", json=updated_task)
-
-    # Проверка успешности обновления
+    response = client.post("/tasks", json=task_data_1)
     assert response.status_code == 200
-    response_json = response.json()
+    response = client.post("/tasks", json=task_data_2)
+    assert response.status_code == 200
 
-    # Проверка, что данные задачи обновлены
-    assert response_json["Status"] == "Success"
-    assert response_json["Task"]["id"] == task_id
-    assert response_json["Task"]["title"] == updated_task["name"]
-    assert response_json["Task"]["description"] == updated_task["description"]
-
+    response = client.get("/tasks")
+    assert response.status_code == 200
+    tasks = response.json()
+    assert len(tasks) >= 2
+    assert any(task["title"] == task_data_1["name"] for task in tasks)
+    assert any(task["title"] == task_data_2["name"] for task in tasks)
 
 @pytest.mark.asyncio
-async def test_delete_task():
-    new_task = {
-        "name": "Test Task to Delete",
-        "description": "This task will be deleted."
-    }
+async def test_update_task(client: TestClient, db_session: AsyncSession):
+    # Тест на обновление задачи
+    new_task_data = {"name": "Update Task", "description": "Updated description"}
+    response = client.post("/tasks", json=new_task_data)
+    task_id = response.json()["task_id"]
 
-    # Создаем задачу
-    response = client.post("/tasks", json=new_task)
-    response_json = response.json()
-    task_id = response_json["task_id"]
+    updated_data = {"name": "Updated Task", "description": "This is an updated task description."}
+    response = client.put(f"/tasks/{task_id}", json=updated_data)
+    assert response.status_code == 200
+    updated_task = response.json()["updated_task"]
+    assert updated_task["title"] == updated_data["name"]
+    assert updated_task["description"] == updated_data["description"]
 
-    # Удаляем задачу
+@pytest.mark.asyncio
+async def test_delete_task(client: TestClient, db_session: AsyncSession):
+    # Тест на удаление задачи
+    new_task_data = {"name": "Delete Task", "description": "This task will be deleted"}
+    response = client.post("/tasks", json=new_task_data)
+    task_id = response.json()["task_id"]
+
     response = client.delete(f"/tasks/{task_id}")
-
-    # Проверка успешности удаления
     assert response.status_code == 200
-    response_json = response.json()
+    data = response.json()
+    assert data["ok"] is True
+    assert data["deleted_task_id"] == task_id
 
-    # Проверка, что задача была удалена
-    assert response_json["Status"] == "Success"
-
-    # Теперь проверим, что задача действительно удалена
-    response = client.get(f"/tasks/{task_id}")
-    assert response.status_code == 404  # Ожидаем, что задача не найдена
-
-
+    # Проверяем, что задача удалена
+    result = await db_session.execute(select(TodoORM).filter(TodoORM.id == task_id))
+    task = result.scalars().first()
+    assert task is None

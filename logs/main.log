@@ -613,3 +613,1024 @@
 2025-01-08T23:54:51.309917+0300 INFO Response: 200 for POST http://127.0.0.1:8001/login
 2025-01-08T23:55:05.584134+0300 INFO Request to http://127.0.0.1:8001/protected - Method: GET - Client IP: 127.0.0.1
 2025-01-08T23:55:05.588133+0300 INFO Response: 200 for GET http://127.0.0.1:8001/protected
+2025-01-09T18:56:11.417666+0300 INFO Request to http://testserver/ - Method: GET - Client IP: testclient
+2025-01-09T18:56:11.419933+0300 INFO Response: 200 for GET http://testserver/
+2025-01-09T18:56:11.427706+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T18:56:11.428664+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T18:57:25.061030+0300 INFO Request to http://testserver/ - Method: GET - Client IP: testclient
+2025-01-09T18:57:25.062023+0300 INFO Response: 200 for GET http://testserver/
+2025-01-09T18:57:25.071322+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T18:57:25.071322+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T18:59:02.671793+0300 INFO Request to http://testserver/ - Method: GET - Client IP: testclient
+2025-01-09T18:59:02.672793+0300 INFO Response: 200 for GET http://testserver/
+2025-01-09T18:59:02.678793+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T18:59:02.679794+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:01:28.706372+0300 INFO Request to http://testserver/ - Method: GET - Client IP: testclient
+2025-01-09T19:01:28.707378+0300 INFO Response: 200 for GET http://testserver/
+2025-01-09T19:01:28.716369+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:01:28.716369+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:04:38.087718+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:04:38.088718+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:04:38.115762+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:05:33.333748+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:05:33.333748+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:05:33.358750+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:34:48.152323+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:34:48.153404+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:34:48.180326+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:34:48.404366+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:34:48.405325+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-09T19:34:48.420375+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:34:48.423366+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:34:48.424323+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-09T19:34:48.440326+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:34:48.444325+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-09T19:34:48.449329+0300 INFO Response: 200 for GET http://testserver/tasks
+2025-01-09T19:34:48.454979+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:34:48.454979+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-09T19:34:48.471868+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:34:48.474868+0300 INFO Request to http://testserver/tasks/6 - Method: PUT - Client IP: testclient
+2025-01-09T19:34:48.474868+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-09T19:34:48.498398+0300 INFO Response: 200 for PUT http://testserver/tasks/6
+2025-01-09T19:34:48.504439+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:34:48.505441+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-09T19:34:48.520937+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:34:48.524935+0300 INFO Request to http://testserver/tasks/7 - Method: DELETE - Client IP: testclient
+2025-01-09T19:34:48.536962+0300 INFO Response: 200 for DELETE http://testserver/tasks/7
+2025-01-09T19:43:42.003705+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:43:42.004706+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:43:42.032709+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:43:42.253752+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:43:42.254704+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-09T19:43:42.274744+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:43:42.277704+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:43:42.277704+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-09T19:43:42.294705+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:43:42.297708+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-09T19:43:42.303108+0300 INFO Response: 200 for GET http://testserver/tasks
+2025-01-09T19:43:42.309063+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:43:42.309063+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-09T19:43:42.324576+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:43:42.327625+0300 INFO Request to http://testserver/tasks/10 - Method: PUT - Client IP: testclient
+2025-01-09T19:43:42.328579+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-09T19:43:42.352012+0300 INFO Response: 200 for PUT http://testserver/tasks/10
+2025-01-09T19:43:42.357803+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:43:42.357803+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-09T19:43:42.377472+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:43:42.381661+0300 INFO Request to http://testserver/tasks/11 - Method: DELETE - Client IP: testclient
+2025-01-09T19:43:42.398065+0300 INFO Response: 200 for DELETE http://testserver/tasks/11
+2025-01-09T19:44:01.083472+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:44:01.084472+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:44:01.111902+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:47:35.510044+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:47:35.510044+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:47:35.539042+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:48:06.670641+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:48:06.671643+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:48:06.697636+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:50:11.316258+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:50:11.316258+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-09T19:50:11.345285+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:50:11.349259+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:50:11.349259+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-09T19:50:11.367260+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:50:11.370259+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-09T19:50:11.378294+0300 INFO Response: 200 for GET http://testserver/tasks
+2025-01-09T19:50:11.384237+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:50:11.384237+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-09T19:50:11.401026+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:50:11.403847+0300 INFO Request to http://testserver/tasks/16 - Method: PUT - Client IP: testclient
+2025-01-09T19:50:11.403847+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-09T19:50:11.424510+0300 INFO Response: 200 for PUT http://testserver/tasks/16
+2025-01-09T19:50:11.430521+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:50:11.430521+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-09T19:50:11.447277+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:50:11.450236+0300 INFO Request to http://testserver/tasks/17 - Method: DELETE - Client IP: testclient
+2025-01-09T19:50:11.463378+0300 INFO Response: 200 for DELETE http://testserver/tasks/17
+2025-01-09T19:51:15.754630+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:51:15.755677+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:51:15.781658+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:51:16.039630+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:51:16.039630+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-09T19:51:16.059724+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:51:16.062762+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:51:16.063723+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-09T19:51:16.078823+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:51:16.082781+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-09T19:51:16.088782+0300 INFO Response: 200 for GET http://testserver/tasks
+2025-01-09T19:51:16.096077+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:51:16.096077+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-09T19:51:16.111830+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:51:16.114891+0300 INFO Request to http://testserver/tasks/20 - Method: PUT - Client IP: testclient
+2025-01-09T19:51:16.114891+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-09T19:51:16.145270+0300 INFO Response: 200 for PUT http://testserver/tasks/20
+2025-01-09T19:51:16.152266+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:51:16.152266+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-09T19:51:16.169053+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:51:16.172733+0300 INFO Request to http://testserver/tasks/21 - Method: DELETE - Client IP: testclient
+2025-01-09T19:51:16.185747+0300 INFO Response: 200 for DELETE http://testserver/tasks/21
+2025-01-09T19:53:37.532269+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:53:37.533220+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:53:37.560263+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:53:37.817267+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:53:37.818220+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-09T19:53:37.837218+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:53:37.841219+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:53:37.841219+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-09T19:53:37.858264+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:53:37.863221+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-09T19:53:37.868222+0300 INFO Response: 200 for GET http://testserver/tasks
+2025-01-09T19:53:37.875377+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:53:37.875377+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-09T19:53:37.893169+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:53:37.896135+0300 INFO Request to http://testserver/tasks/24 - Method: PUT - Client IP: testclient
+2025-01-09T19:53:37.896135+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-09T19:53:37.916854+0300 INFO Response: 200 for PUT http://testserver/tasks/24
+2025-01-09T19:53:37.926853+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:53:37.926853+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-09T19:53:37.942603+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:53:37.945604+0300 INFO Request to http://testserver/tasks/25 - Method: DELETE - Client IP: testclient
+2025-01-09T19:53:37.958328+0300 INFO Response: 200 for DELETE http://testserver/tasks/25
+2025-01-09T19:55:35.054067+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:55:35.054067+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-09T19:55:35.083068+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:55:35.345115+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:55:35.346067+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-09T19:55:35.366067+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:55:35.369067+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:55:35.369067+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-09T19:55:35.386096+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:55:35.389070+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-09T19:55:35.395555+0300 INFO Response: 200 for GET http://testserver/tasks
+2025-01-09T19:55:35.402594+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:55:35.403553+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-09T19:55:35.419082+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:55:35.422082+0300 INFO Request to http://testserver/tasks/28 - Method: PUT - Client IP: testclient
+2025-01-09T19:55:35.422082+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-09T19:55:35.442798+0300 INFO Response: 200 for PUT http://testserver/tasks/28
+2025-01-09T19:55:35.450834+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-09T19:55:35.450834+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-09T19:55:35.467007+0300 INFO Response: 200 for POST http://testserver/tasks
+2025-01-09T19:55:35.470969+0300 INFO Request to http://testserver/tasks/29 - Method: DELETE - Client IP: testclient
+2025-01-09T19:55:35.489898+0300 INFO Response: 200 for DELETE http://testserver/tasks/29
+2025-01-09T20:05:39.302308+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:05:39.304269+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-09T20:05:39.390268+0300 INFO Request to http://127.0.0.1:8002/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:05:39.458267+0300 INFO Response: 200 for GET http://127.0.0.1:8002/image
+2025-01-09T20:05:39.595284+0300 INFO Request to http://127.0.0.1:8002/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:05:39.597266+0300 INFO Response: 404 for GET http://127.0.0.1:8002/favicon.ico
+2025-01-09T20:05:40.817898+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:05:40.820874+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-09T20:05:41.609231+0300 INFO Request to http://127.0.0.1:8002/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:05:41.624229+0300 INFO Response: 200 for GET http://127.0.0.1:8002/openapi.json
+2025-01-09T20:05:48.342367+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:05:48.343356+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T20:05:48.374358+0300 INFO Response: 200 for POST http://127.0.0.1:8002/tasks/
+2025-01-09T20:05:53.613934+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:05:53.625972+0300 INFO Response: 200 for GET http://127.0.0.1:8002/tasks/
+2025-01-09T20:08:42.371785+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:08:42.374785+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-09T20:08:43.681185+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:08:43.682185+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-09T20:08:43.985192+0300 INFO Request to http://127.0.0.1:8002/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:08:43.990190+0300 INFO Response: 200 for GET http://127.0.0.1:8002/openapi.json
+2025-01-09T20:09:04.547480+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:09:04.548536+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T20:09:04.579517+0300 INFO Response: 200 for POST http://127.0.0.1:8002/tasks/
+2025-01-09T20:09:07.517623+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:09:07.531600+0300 INFO Response: 200 for GET http://127.0.0.1:8002/tasks/
+2025-01-09T20:14:07.735769+0300 INFO Request to http://127.0.0.1:8003/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:14:07.737764+0300 INFO Response: 200 for GET http://127.0.0.1:8003/
+2025-01-09T20:14:07.805778+0300 INFO Request to http://127.0.0.1:8003/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:14:07.882759+0300 INFO Response: 200 for GET http://127.0.0.1:8003/image
+2025-01-09T20:14:07.912763+0300 INFO Request to http://127.0.0.1:8003/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:14:07.913766+0300 INFO Response: 404 for GET http://127.0.0.1:8003/favicon.ico
+2025-01-09T20:14:09.121763+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:14:09.122795+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T20:14:09.436761+0300 INFO Request to http://127.0.0.1:8003/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:14:09.445762+0300 INFO Response: 200 for GET http://127.0.0.1:8003/openapi.json
+2025-01-09T20:14:18.626777+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:14:18.627779+0300 DEBUG Request Body: {
+  "name": "cxc",
+  "description": "cxxc"
+}
+2025-01-09T20:14:18.669793+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T20:14:24.095866+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:14:24.100901+0300 DEBUG Request Body: {
+  "name": "q",
+  "description": "asdfghj"
+}
+2025-01-09T20:14:24.135877+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T20:14:26.440046+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:14:26.441049+0300 DEBUG Request Body: {
+  "name": "q",
+  "description": "asdfghj"
+}
+2025-01-09T20:14:26.470045+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T20:14:32.316673+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:14:32.331620+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T20:17:56.549341+0300 INFO Request to http://127.0.0.1:8003/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:17:56.551352+0300 INFO Response: 200 for GET http://127.0.0.1:8003/
+2025-01-09T20:17:58.247341+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:17:58.248348+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T20:17:58.541369+0300 INFO Request to http://127.0.0.1:8003/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:17:58.552341+0300 INFO Response: 200 for GET http://127.0.0.1:8003/openapi.json
+2025-01-09T20:18:02.979967+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:18:02.980966+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T20:18:03.016966+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T20:18:06.205153+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:18:06.223202+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T20:18:51.717917+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:18:51.717917+0300 DEBUG Request Body: {
+  "name": "\u043f\u0435\u0440\u0432\u0430\u044f",
+  "description": "\u0432\u0442\u0440\u0430\u044f"
+}
+2025-01-09T20:18:51.747936+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T20:18:58.202812+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:18:58.212816+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T20:22:00.431468+0300 INFO Request to http://127.0.0.1:8003/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:00.433471+0300 INFO Response: 200 for GET http://127.0.0.1:8003/
+2025-01-09T20:22:02.174468+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:02.175511+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T20:22:02.332471+0300 INFO Request to http://127.0.0.1:8003/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:02.339466+0300 INFO Response: 200 for GET http://127.0.0.1:8003/openapi.json
+2025-01-09T20:22:09.151018+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T20:22:09.152017+0300 DEBUG Request Body: {
+  "name": "\u0440\u043e\u043b",
+  "description": "string"
+}
+2025-01-09T20:22:09.197020+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T20:22:12.658855+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:12.673891+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T20:22:34.551026+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:34.552022+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T20:22:34.729029+0300 INFO Request to http://127.0.0.1:8003/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:34.730024+0300 INFO Response: 200 for GET http://127.0.0.1:8003/openapi.json
+2025-01-09T20:22:39.202898+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:22:39.221902+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T20:59:55.236915+0300 INFO Request to http://127.0.0.1:8003/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T20:59:55.238914+0300 INFO Response: 404 for GET http://127.0.0.1:8003/favicon.ico
+2025-01-09T21:33:17.515651+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:33:17.577648+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T21:33:35.696121+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:33:35.700130+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T21:33:35.929120+0300 INFO Request to http://127.0.0.1:8003/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:33:35.933117+0300 INFO Response: 200 for GET http://127.0.0.1:8003/openapi.json
+2025-01-09T21:33:45.075659+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:33:45.097655+0300 INFO Response: 200 for GET http://127.0.0.1:8003/tasks/
+2025-01-09T21:40:27.128184+0300 INFO Request to http://127.0.0.1:8003/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:40:27.130222+0300 INFO Response: 200 for GET http://127.0.0.1:8003/
+2025-01-09T21:40:28.580185+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:40:28.581185+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T21:40:28.743191+0300 INFO Request to http://127.0.0.1:8003/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:40:28.752186+0300 INFO Response: 200 for GET http://127.0.0.1:8003/openapi.json
+2025-01-09T21:40:44.786832+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T21:40:44.788790+0300 DEBUG Request Body: {
+  "name": "xf",
+  "description": "bnm,"
+}
+2025-01-09T21:40:44.818783+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T21:40:50.894597+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:41:51.090292+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:41:51.091292+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T21:41:51.247297+0300 INFO Request to http://127.0.0.1:8005/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:41:51.322289+0300 INFO Response: 200 for GET http://127.0.0.1:8005/image
+2025-01-09T21:41:51.408309+0300 INFO Request to http://127.0.0.1:8005/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:41:51.411297+0300 INFO Response: 404 for GET http://127.0.0.1:8005/favicon.ico
+2025-01-09T21:41:52.606773+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:41:52.607773+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T21:41:52.839779+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:41:52.845773+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T21:41:59.130530+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T21:41:59.130530+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T21:41:59.165519+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T21:42:03.828199+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:03.588623+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:03.589620+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T21:43:03.848621+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:03.856620+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T21:43:08.926647+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:08.928645+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T21:43:10.454379+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:10.455379+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T21:43:10.619381+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:10.620382+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T21:43:19.770574+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T21:43:19.770574+0300 DEBUG Request Body: {
+  "name": "s",
+  "description": "ss"
+}
+2025-01-09T21:43:19.800572+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T21:43:24.249715+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:43:24.277714+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T21:44:48.119532+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:44:48.121537+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T21:44:49.718037+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:44:49.719053+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T21:44:49.904034+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:44:49.905033+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T21:44:54.829797+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:44:54.844795+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T21:48:40.427029+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:48:40.429051+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T21:48:41.849031+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:48:41.850030+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T21:48:42.042075+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:48:42.054052+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T21:48:48.859681+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T21:48:48.860683+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T21:48:48.897676+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T21:48:51.797728+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:48:51.810765+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T21:49:32.791285+0300 INFO Request to http://127.0.0.1:8005/tasks - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:49:32.792286+0300 INFO Response: 307 for GET http://127.0.0.1:8005/tasks
+2025-01-09T21:49:32.816286+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:49:32.826283+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T21:50:07.460932+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:50:07.468938+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T21:55:26.751458+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:55:26.753459+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T21:55:32.153985+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:55:32.154978+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T21:55:32.457980+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:55:32.472988+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T21:55:37.658409+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T21:55:37.660378+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T21:55:37.689998+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T21:55:42.064320+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T21:55:42.084318+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T21:55:52.457056+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T21:55:52.459054+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T21:55:52.490057+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T22:00:29.385630+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:00:29.386639+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:00:30.737656+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:00:30.741667+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:00:30.931669+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:00:30.935652+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:00:35.043739+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:00:35.045757+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:00:35.091732+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T22:00:42.613840+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:00:42.631839+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:01:22.246056+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:01:22.246056+0300 DEBUG Request Body: {
+  "name": "\u0417\u0430\u0434\u0430\u043d\u0438\u0435 \u043d\u0430 \u0441\u0435\u0433\u043e\u0434\u043d\u044f",
+  "description": "\u041e\u0442\u0436\u0430\u0442\u044c\u0441\u044f 100 \u0440\u0430\u0437"
+}
+2025-01-09T22:01:22.274003+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T22:01:36.092258+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:01:36.116310+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:01:40.927675+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:01:40.933672+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:01:45.776907+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:01:45.784903+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:01:46.528471+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:01:46.536470+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:03:04.967111+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:03:04.977138+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:03:26.765887+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:03:26.765887+0300 DEBUG Request Body: {
+  "name": "\u0417\u0430\u0434\u0430\u043d\u0438\u0435 \u043d\u0430 \u0437\u0430\u0432\u0442\u0440\u0430",
+  "description": "\u041e\u0442\u0436\u0430\u0442\u044c\u0441\u044f 500 \u0440\u0430\u0437"
+}
+2025-01-09T22:03:26.807899+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T22:03:29.305721+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:03:29.315721+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:03:58.903518+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:03:58.911473+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:03:59.843330+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:03:59.849991+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:04:16.735610+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:04:16.736617+0300 DEBUG Request Body: {
+  "name": "\u0417\u0430\u0434\u0430\u043d\u0438\u0435 \u043d\u0430 gjcktpfdnhf ",
+  "description": "\u041e\u0442\u0436\u0430\u0442\u044c\u0441\u044f 500 \u0440\u0430\u0437"
+}
+2025-01-09T22:05:09.802765+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:09.803765+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:05:13.163308+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:13.164348+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:05:13.384306+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:13.391316+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:05:18.848920+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:05:18.848920+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:05:30.496120+0300 INFO Request to http://127.0.0.1:8005/tasks - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:30.498119+0300 INFO Response: 307 for GET http://127.0.0.1:8005/tasks
+2025-01-09T22:05:30.510127+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:30.526122+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:05:40.496572+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:40.506568+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:05:46.465456+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:05:46.466458+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "ww"
+}
+2025-01-09T22:05:54.834519+0300 INFO Request to http://127.0.0.1:8005/tasks - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:54.835520+0300 INFO Response: 307 for GET http://127.0.0.1:8005/tasks
+2025-01-09T22:05:54.850519+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:05:54.867533+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:06:19.026753+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:19.041299+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:06:20.150380+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:20.160379+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:06:26.304104+0300 INFO Request to http://127.0.0.1:8005/tasks/post - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:26.305111+0300 INFO Response: 405 for GET http://127.0.0.1:8005/tasks/post
+2025-01-09T22:06:31.026865+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:31.027866+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:06:31.230864+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:31.235864+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:06:38.122782+0300 INFO Request to http://127.0.0.1:8005/tasks/post - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:06:38.123781+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:06:53.021312+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:53.022306+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:06:53.269307+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:06:53.280306+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:06:57.582074+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:06:57.583100+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:07:13.071457+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:07:13.072457+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:07:14.776144+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:07:14.777143+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:07:14.956159+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:07:14.966146+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:07:18.787146+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:07:18.788098+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:07:26.607337+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:07:26.632334+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:07:43.557217+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:07:43.575172+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:07:46.469517+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:07:46.470523+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:08:16.036495+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:16.039486+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:08:17.803517+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:17.804516+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:08:17.973515+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:17.979518+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:08:22.423076+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:08:22.424080+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:08:22.458072+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T22:08:29.592360+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T22:08:29.592360+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-09T22:08:29.617591+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-09T22:08:36.292676+0300 INFO Request to http://127.0.0.1:8005/tasks - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:36.293688+0300 INFO Response: 307 for GET http://127.0.0.1:8005/tasks
+2025-01-09T22:08:36.305677+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:36.318674+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:08:38.641094+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:38.652443+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:08:39.126603+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:08:39.134606+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-09T22:50:49.823313+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:50:49.824314+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:50:51.369963+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:50:51.370964+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:50:51.580960+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:50:51.596963+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:51:54.374688+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:54.377663+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:51:54.596667+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:54.607669+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:51:55.229980+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:55.230955+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:51:55.319948+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:55.320946+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:51:55.749947+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:55.750947+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:51:55.843950+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:55.844951+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:51:58.490713+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:58.491712+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:51:58.683715+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:51:58.687744+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:53:33.212179+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:33.215180+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:53:34.370291+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:34.372275+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:53:34.663273+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:34.675269+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:53:36.608104+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:36.608104+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:53:36.708103+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:36.710141+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:53:37.273104+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:37.274109+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:53:37.385100+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:53:37.387102+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:54:36.717176+0300 INFO Request to http://127.0.0.1:8005/static/wallpers.png. - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:54:36.718173+0300 INFO Response: 404 for GET http://127.0.0.1:8005/static/wallpers.png.
+2025-01-09T22:54:40.215707+0300 INFO Request to http://127.0.0.1:8005/static/wallpers.png - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:54:40.216707+0300 INFO Response: 404 for GET http://127.0.0.1:8005/static/wallpers.png
+2025-01-09T22:55:13.974619+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:55:13.975619+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:55:15.304167+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:55:15.305169+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:55:15.476172+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:55:15.484172+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T22:59:49.017457+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:59:49.018458+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T22:59:50.404839+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:59:50.405839+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T22:59:50.553838+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T22:59:50.559837+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T23:00:51.419251+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:00:51.420249+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T23:00:51.559248+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:00:51.560247+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T23:00:52.144253+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:00:52.145255+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T23:00:52.238250+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:00:52.239249+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T23:00:52.626299+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:00:52.627295+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-09T23:00:52.720250+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:00:52.721249+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-09T23:01:03.173635+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:04.047270+0300 INFO Request to http://127.0.0.1:8004/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:04.048270+0300 INFO Response: 200 for GET http://127.0.0.1:8004/
+2025-01-09T23:01:04.164273+0300 INFO Request to http://127.0.0.1:8004/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:04.267266+0300 INFO Response: 200 for GET http://127.0.0.1:8004/image
+2025-01-09T23:01:04.301280+0300 INFO Request to http://127.0.0.1:8004/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:04.303275+0300 INFO Response: 404 for GET http://127.0.0.1:8004/favicon.ico
+2025-01-09T23:01:05.596014+0300 INFO Request to http://127.0.0.1:8004/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:05.597013+0300 INFO Response: 200 for GET http://127.0.0.1:8004/docs
+2025-01-09T23:01:05.771017+0300 INFO Request to http://127.0.0.1:8004/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:05.779013+0300 INFO Response: 200 for GET http://127.0.0.1:8004/openapi.json
+2025-01-09T23:02:12.178357+0300 INFO Request to http://127.0.0.1:8004/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:02:12.184418+0300 INFO Response: 200 for GET http://127.0.0.1:8004/
+2025-01-09T23:02:13.475353+0300 INFO Request to http://127.0.0.1:8004/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:02:13.477358+0300 INFO Response: 200 for GET http://127.0.0.1:8004/docs
+2025-01-09T23:02:13.892356+0300 INFO Request to http://127.0.0.1:8004/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:02:13.894356+0300 INFO Response: 200 for GET http://127.0.0.1:8004/openapi.json
+2025-01-09T23:04:18.706875+0300 INFO Request to http://127.0.0.1:8004/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:04:18.708864+0300 INFO Response: 200 for GET http://127.0.0.1:8004/
+2025-01-09T23:04:20.041846+0300 INFO Request to http://127.0.0.1:8004/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:04:20.042848+0300 INFO Response: 200 for GET http://127.0.0.1:8004/docs
+2025-01-09T23:04:20.211850+0300 INFO Request to http://127.0.0.1:8004/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:04:20.223872+0300 INFO Response: 200 for GET http://127.0.0.1:8004/openapi.json
+2025-01-09T23:06:21.715061+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:21.717066+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:06:21.804061+0300 INFO Request to http://127.0.0.1:8000/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:21.880058+0300 INFO Response: 200 for GET http://127.0.0.1:8000/image
+2025-01-09T23:06:21.912084+0300 INFO Request to http://127.0.0.1:8000/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:21.914064+0300 INFO Response: 404 for GET http://127.0.0.1:8000/favicon.ico
+2025-01-09T23:06:23.109108+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:23.110105+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:06:23.274110+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:23.281104+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:06:29.731505+0300 INFO Request to http://127.0.0.1:8000/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:29.733500+0300 INFO Response: 404 for GET http://127.0.0.1:8000/favicon.ico
+2025-01-09T23:06:50.294662+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:50.295664+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:06:51.366824+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:51.368817+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:06:51.651817+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:51.665815+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:06:58.087358+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:58.087358+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:06:58.193357+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:06:58.194354+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:09:23.732679+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:09:23.733683+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:09:24.651701+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:09:24.652680+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:09:24.918680+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:09:24.929683+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:11:01.824349+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:11:01.825391+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:11:02.907351+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:11:02.908349+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:11:03.221375+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:11:03.237386+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:12:13.744426+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:12:13.749398+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:12:15.154398+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:12:15.155395+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:12:15.422397+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:12:15.432393+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:13:59.661133+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:13:59.662132+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:14:01.203506+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:14:01.204504+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:14:01.455522+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:14:01.461505+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:14:49.563507+0300 INFO Request to http://127.0.0.1:8000/static/Oboi.jpg - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:14:49.642507+0300 INFO Response: 200 for GET http://127.0.0.1:8000/static/Oboi.jpg
+2025-01-09T23:15:40.105128+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:15:40.107077+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:15:40.247079+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:15:40.248083+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:15:54.870691+0300 INFO Request to http://127.0.0.1:8000/static/Oboi.jpg - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:15:54.873693+0300 INFO Response: 304 for GET http://127.0.0.1:8000/static/Oboi.jpg
+2025-01-09T23:16:55.171221+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:16:55.173236+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:16:57.031223+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:16:57.032222+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:16:57.387222+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:16:57.392219+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:17:07.858365+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:17:07.859363+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:17:07.962366+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:17:07.963368+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:17:08.433364+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:17:08.434365+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:17:08.509783+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:17:08.510786+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:18:05.809841+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:05.810842+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:18:06.858000+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:06.858999+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:18:07.142003+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:07.147005+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:18:23.820056+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:23.823059+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:18:24.505050+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:24.506053+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:18:34.915245+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:34.919245+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:18:35.328243+0300 INFO Request to http://127.0.0.1:8000/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:35.440242+0300 INFO Response: 200 for GET http://127.0.0.1:8000/image
+2025-01-09T23:18:35.477241+0300 INFO Request to http://127.0.0.1:8000/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:18:35.479241+0300 INFO Response: 404 for GET http://127.0.0.1:8000/favicon.ico
+2025-01-09T23:19:37.158698+0300 INFO Request to http://127.0.0.1:8000/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:19:37.160696+0300 INFO Response: 200 for GET http://127.0.0.1:8000/
+2025-01-09T23:19:38.524698+0300 INFO Request to http://127.0.0.1:8000/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:19:38.525696+0300 INFO Response: 200 for GET http://127.0.0.1:8000/docs
+2025-01-09T23:19:38.763698+0300 INFO Request to http://127.0.0.1:8000/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:19:38.773697+0300 INFO Response: 200 for GET http://127.0.0.1:8000/openapi.json
+2025-01-09T23:20:27.691733+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:20:27.692733+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:20:27.774744+0300 INFO Request to http://127.0.0.1:8007/image - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:20:27.858734+0300 INFO Response: 200 for GET http://127.0.0.1:8007/image
+2025-01-09T23:20:27.887741+0300 INFO Request to http://127.0.0.1:8007/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:20:27.888740+0300 INFO Response: 404 for GET http://127.0.0.1:8007/favicon.ico
+2025-01-09T23:20:29.023975+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:20:29.024977+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:20:29.241981+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:20:29.263975+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:21:44.676293+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:21:44.681293+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:21:45.782409+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:21:45.783407+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:21:46.088407+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:21:46.095421+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:23:06.744555+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:06.746598+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:23:08.959494+0300 INFO Request to http://127.0.0.1:8000/static/Oboi.jpg - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:09.032493+0300 INFO Response: 304 for GET http://127.0.0.1:8000/static/Oboi.jpg
+2025-01-09T23:23:20.064469+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:20.065467+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:23:21.155954+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:21.164958+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:23:25.171276+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:25.172298+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:23:25.688308+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:25.693300+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:23:49.565543+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:49.567549+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:23:49.857549+0300 INFO Request to http://127.0.0.1:8007/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:49.859551+0300 INFO Response: 404 for GET http://127.0.0.1:8007/favicon.ico
+2025-01-09T23:23:50.805570+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:50.807572+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:23:51.326570+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:23:51.336602+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:26:08.673008+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:26:08.674001+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:26:08.952010+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:26:08.961000+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:26:11.609655+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:26:11.610657+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:26:13.280854+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:26:13.281854+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:26:13.472873+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:26:13.474856+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:28:59.093378+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:28:59.094341+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:29:00.284469+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:00.286479+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:29:00.562471+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:00.572470+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T20:13:35.195848+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:01:03.174635+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-09T23:29:35.579360+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:35.600363+0300 INFO Request to http://127.0.0.1:8003/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:35.602378+0300 INFO Request to http://127.0.0.1:8003/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-09T23:29:35.644364+0300 DEBUG Request Body: {
+  "name": "xf",
+  "description": "bnm,"
+}
+2025-01-09T23:29:35.647360+0300 INFO Request to http://127.0.0.1:8003/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:35.648362+0300 INFO Request to http://127.0.0.1:8003/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:35.665362+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-09T23:29:35.676359+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:35.678375+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:29:35.687361+0300 INFO Response: 200 for GET http://127.0.0.1:8003/
+2025-01-09T23:29:35.688360+0300 INFO Response: 200 for GET http://127.0.0.1:8003/docs
+2025-01-09T23:29:35.689369+0300 INFO Response: 200 for GET http://127.0.0.1:8003/
+2025-01-09T23:29:35.692361+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-09T23:29:35.693358+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-09T23:29:35.824362+0300 INFO Response: 200 for POST http://127.0.0.1:8003/tasks/
+2025-01-09T23:30:01.943705+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:30:01.979731+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-09T23:30:03.974710+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:30:03.979708+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-09T23:30:04.450715+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:30:04.479718+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-09T23:30:12.951532+0300 INFO Request to http://127.0.0.1:8005/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-09T23:30:12.982801+0300 INFO Response: 404 for GET http://127.0.0.1:8005/favicon.ico
+2025-01-10T19:32:02.134231+0300 INFO Request to http://127.0.0.1:8007/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T19:32:02.136191+0300 INFO Response: 200 for GET http://127.0.0.1:8007/
+2025-01-10T19:32:02.207574+0300 INFO Request to http://127.0.0.1:8007/image - Method: GET - Client IP: 127.0.0.1
+2025-01-10T19:32:02.318569+0300 INFO Response: 200 for GET http://127.0.0.1:8007/image
+2025-01-10T19:32:02.358580+0300 INFO Request to http://127.0.0.1:8007/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-10T19:32:02.359577+0300 INFO Response: 404 for GET http://127.0.0.1:8007/favicon.ico
+2025-01-10T19:32:03.434160+0300 INFO Request to http://127.0.0.1:8007/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T19:32:03.435161+0300 INFO Response: 200 for GET http://127.0.0.1:8007/docs
+2025-01-10T19:32:03.735168+0300 INFO Request to http://127.0.0.1:8007/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T19:32:03.766158+0300 INFO Response: 200 for GET http://127.0.0.1:8007/openapi.json
+2025-01-10T19:32:10.798117+0300 INFO Request to http://127.0.0.1:8007/login - Method: POST - Client IP: 127.0.0.1
+2025-01-10T19:32:10.798117+0300 DEBUG Request Body: {
+  "username": "string",
+  "password": "string"
+}
+2025-01-10T19:32:10.804112+0300 INFO Response: 401 for POST http://127.0.0.1:8007/login
+2025-01-10T19:32:20.119929+0300 INFO Request to http://127.0.0.1:8007/login - Method: POST - Client IP: 127.0.0.1
+2025-01-10T19:32:20.120934+0300 DEBUG Request Body: {
+  "username": "test",
+  "password": "test"
+}
+2025-01-10T19:32:20.130930+0300 INFO Response: 200 for POST http://127.0.0.1:8007/login
+2025-01-10T19:33:35.536095+0300 INFO Request to http://127.0.0.1:8007/protected - Method: GET - Client IP: 127.0.0.1
+2025-01-10T19:33:35.538102+0300 INFO Response: 200 for GET http://127.0.0.1:8007/protected
+2025-01-10T20:22:34.714394+0300 INFO Request to http://127.0.0.1:8001/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:22:34.718392+0300 INFO Response: 200 for GET http://127.0.0.1:8001/
+2025-01-10T20:22:34.760393+0300 INFO Request to http://127.0.0.1:8001/image - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:22:34.969496+0300 INFO Response: 200 for GET http://127.0.0.1:8001/image
+2025-01-10T20:22:35.355391+0300 INFO Request to http://127.0.0.1:8001/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:22:35.356383+0300 INFO Response: 404 for GET http://127.0.0.1:8001/favicon.ico
+2025-01-10T20:22:36.537550+0300 INFO Request to http://127.0.0.1:8001/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:22:36.538548+0300 INFO Response: 200 for GET http://127.0.0.1:8001/docs
+2025-01-10T20:22:36.704858+0300 INFO Request to http://127.0.0.1:8001/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:22:36.710825+0300 INFO Response: 200 for GET http://127.0.0.1:8001/openapi.json
+2025-01-10T20:22:45.148086+0300 INFO Request to http://127.0.0.1:8001/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T20:22:45.149082+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-10T20:22:45.184068+0300 INFO Response: 200 for POST http://127.0.0.1:8001/tasks/
+2025-01-10T20:22:47.945464+0300 INFO Request to http://127.0.0.1:8001/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:23:10.051139+0300 INFO Request to http://127.0.0.1:8005/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:23:10.054203+0300 INFO Response: 200 for GET http://127.0.0.1:8005/
+2025-01-10T20:23:10.119803+0300 INFO Request to http://127.0.0.1:8005/image - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:23:10.175500+0300 INFO Response: 200 for GET http://127.0.0.1:8005/image
+2025-01-10T20:23:11.382232+0300 INFO Request to http://127.0.0.1:8005/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:23:11.384240+0300 INFO Response: 404 for GET http://127.0.0.1:8005/favicon.ico
+2025-01-10T20:23:12.381003+0300 INFO Request to http://127.0.0.1:8005/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:23:12.383003+0300 INFO Response: 200 for GET http://127.0.0.1:8005/docs
+2025-01-10T20:23:12.708003+0300 INFO Request to http://127.0.0.1:8005/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:23:12.716005+0300 INFO Response: 200 for GET http://127.0.0.1:8005/openapi.json
+2025-01-10T20:23:17.588020+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T20:23:17.588020+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-10T20:23:17.626977+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-10T20:23:23.365378+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T20:23:23.365378+0300 DEBUG Request Body: {
+  "name": "\u044b\u0432\u043c",
+  "description": "\u044b\u0432\u044f\u0447"
+}
+2025-01-10T20:23:23.395938+0300 INFO Response: 200 for POST http://127.0.0.1:8005/tasks/
+2025-01-10T20:29:02.682537+0300 INFO Request to http://127.0.0.1:8005/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T20:29:02.720535+0300 INFO Response: 200 for GET http://127.0.0.1:8005/tasks/
+2025-01-10T21:16:43.379413+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:16:43.380296+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-10T21:16:43.465741+0300 INFO Request to http://127.0.0.1:8002/image - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:16:43.527352+0300 INFO Response: 200 for GET http://127.0.0.1:8002/image
+2025-01-10T21:16:43.952845+0300 INFO Request to http://127.0.0.1:8002/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:16:43.953838+0300 INFO Response: 404 for GET http://127.0.0.1:8002/favicon.ico
+2025-01-10T21:16:45.773474+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:16:45.774472+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-10T21:16:45.985984+0300 INFO Request to http://127.0.0.1:8002/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:16:45.999008+0300 INFO Response: 200 for GET http://127.0.0.1:8002/openapi.json
+2025-01-10T21:16:53.518516+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T21:16:53.519516+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-10T21:30:38.483725+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:30:38.486565+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-10T21:30:51.161678+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:30:51.162719+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-10T21:30:51.888344+0300 INFO Request to http://127.0.0.1:8002/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:30:51.907348+0300 INFO Response: 200 for GET http://127.0.0.1:8002/openapi.json
+2025-01-10T21:31:08.559150+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T21:31:08.560149+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-10T21:38:54.558930+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:38:54.559927+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-10T21:38:56.426417+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:38:56.427332+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-10T21:38:56.693163+0300 INFO Request to http://127.0.0.1:8002/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:38:56.709169+0300 INFO Response: 200 for GET http://127.0.0.1:8002/openapi.json
+2025-01-10T21:39:05.412573+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T21:39:05.413574+0300 DEBUG Request Body: {
+  "name": "c",
+  "description": "cc"
+}
+2025-01-10T21:39:05.463140+0300 INFO Response: 200 for POST http://127.0.0.1:8002/tasks/
+2025-01-10T21:39:13.951517+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T21:39:13.994545+0300 INFO Response: 200 for GET http://127.0.0.1:8002/tasks/
+2025-01-10T22:14:04.366308+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T22:14:04.367351+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-10T22:14:05.912249+0300 INFO Request to http://127.0.0.1:8002/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T22:14:05.913254+0300 INFO Response: 200 for GET http://127.0.0.1:8002/docs
+2025-01-10T22:14:06.186581+0300 INFO Request to http://127.0.0.1:8002/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-10T22:14:06.196639+0300 INFO Response: 200 for GET http://127.0.0.1:8002/openapi.json
+2025-01-10T22:14:16.800947+0300 INFO Request to http://127.0.0.1:8002/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T22:14:16.801948+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-10T22:14:16.839414+0300 INFO Response: 200 for POST http://127.0.0.1:8002/tasks/
+2025-01-10T22:14:27.457101+0300 INFO Request to http://127.0.0.1:8002/tasks/1 - Method: GET - Client IP: 127.0.0.1
+2025-01-10T22:14:27.470098+0300 INFO Response: 200 for GET http://127.0.0.1:8002/tasks/1

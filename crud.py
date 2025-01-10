@@ -42,3 +42,13 @@ async def delete_task(session: AsyncSession, task_id: int):
     await session.delete(task)
     await session.commit()
     return task_id
+
+
+async def get_task_by_id(session: AsyncSession, task_id: int):
+    # Создание асинхронного запроса
+    query = select(TodoORM).where(TodoORM.id == task_id)
+    # Выполнение запроса
+    result = await session.execute(query)
+    # Извлечение первой задачи из результатов
+    task = result.scalars().first()
+    return task

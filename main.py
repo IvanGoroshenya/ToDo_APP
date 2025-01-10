@@ -11,9 +11,11 @@ from starlette.responses import HTMLResponse, FileResponse, Response
 from dependencies import SessionDep
 from loger_config import service_logger as logger
 from contextlib import asynccontextmanager
+from fastapi.staticfiles import StaticFiles
 from models import TodoORM
-from router import router  # Без круговой зависимости
-from database import setup_database
+from database import setup_database, engine
+from router import router
+
 from schemas import STaskADD, UserLoginSchema
 
 
@@ -24,8 +26,13 @@ async def lifespan(app: FastAPI):
     yield
     print('Выключение')
 
-app = FastAPI(lifespan=lifespan)
+
+
+app = FastAPI(lifespan=lifespan,swagger_ui_parameters={"swagger_ui_css": "/static/swagger.css"})
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 app.include_router(router)
+
 
 
 config = AuthXConfig()
@@ -135,3 +142,6 @@ def login(credentials: UserLoginSchema, responce: Response):
 @app.get('/protected',dependencies=[Depends(security.access_token_required)])
 def protected():
     return {'data':'Secret'}
+
+
+
