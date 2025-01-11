@@ -1634,3 +1634,14 @@
 2025-01-10T22:14:16.839414+0300 INFO Response: 200 for POST http://127.0.0.1:8002/tasks/
 2025-01-10T22:14:27.457101+0300 INFO Request to http://127.0.0.1:8002/tasks/1 - Method: GET - Client IP: 127.0.0.1
 2025-01-10T22:14:27.470098+0300 INFO Response: 200 for GET http://127.0.0.1:8002/tasks/1
+2025-01-10T22:42:33.157851+0300 INFO Request to http://127.0.0.1:8001/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-10T22:42:33.163868+0300 INFO Request to http://127.0.0.1:8001/tasks/ - Method: POST - Client IP: 127.0.0.1
+2025-01-10T22:42:33.165849+0300 DEBUG Request Body: {
+  "name": "string",
+  "description": "string"
+}
+2025-01-10T22:42:33.167854+0300 INFO Request to http://127.0.0.1:8001/ - Method: GET - Client IP: 127.0.0.1
+2025-01-10T22:42:33.182867+0300 INFO Response: 200 for GET http://127.0.0.1:8001/docs
+2025-01-10T22:42:33.187858+0300 INFO Response: 200 for GET http://127.0.0.1:8001/
+2025-01-10T22:42:33.251852+0300 INFO Response: 200 for GET http://127.0.0.1:8001/tasks/
+2025-01-10T22:42:33.282849+0300 INFO Response: 200 for POST http://127.0.0.1:8001/tasks/
