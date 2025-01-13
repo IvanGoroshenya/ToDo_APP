@@ -1,13 +1,13 @@
 import tempfile
-import pytest
-from fastapi.testclient import TestClient
-from sqlalchemy.future import select
-from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
-from models import TodoORM
-from database import engine, get_session
-from main import app
-import pytest_asyncio
 
+import pytest
+import pytest_asyncio
+from sqlalchemy import select
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
+from starlette.testclient import TestClient
+
+from main import app
+from models import TodoORM
 
 DATABASE_URL = f"sqlite+aiosqlite:///{tempfile.mktemp()}"
 engine = create_async_engine(DATABASE_URL, echo=True)

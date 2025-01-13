@@ -1,13 +1,16 @@
+import asyncio
 import json
 import os
 from fastapi import HTTPException
 from urllib.request import Request
 from authx import AuthX,AuthXConfig
-from fastapi import FastAPI
+from fastapi import FastAPI, BackgroundTasks
 from fastapi.openapi.utils import status_code_ranges
 from fastapi.params import Depends
 from sqlalchemy import select
 from starlette.responses import HTMLResponse, FileResponse, Response
+
+from crud import create_task
 from dependencies import SessionDep
 from loger_config import service_logger as logger
 from contextlib import asynccontextmanager
@@ -15,6 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from models import TodoORM
 from database import setup_database, engine
 from router import router
+import time
 
 from schemas import STaskADD, UserLoginSchema
 
@@ -145,3 +149,19 @@ def protected():
 
 
 
+
+
+
+def task():
+    time.sleep(4)
+    print('синх фн задача ')
+
+async def  taskss():
+    time.sleep(2)
+    print('Асинх фн задача')
+
+@app.post('/')
+async def some_task(bg_tasks:BackgroundTasks):
+    ...
+    bg_tasks.add_task(task)
+    return {'ok':True}

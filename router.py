@@ -1,6 +1,10 @@
+import os
+
 from celery.result import AsyncResult
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends
 from fastapi.templating import Jinja2Templates
+from fastapi.responses import FileResponse
+from backgrounds.background_tasks import  make_tasks_report
 from schemas import STaskADD
 from dependencies import SessionDep
 # from celery_tasks.tasks import create_task_async
@@ -52,12 +56,6 @@ async def get_task(request: Request, session: SessionDep):
 #     return {"status": task_result.state}
 
 
-
-
-
-
-
-
 # Обновление задачи
 @router.put("/{task_id}")
 async def put_tasks(task_id: int, data: STaskADD, session: SessionDep):
@@ -81,3 +79,27 @@ async def get_task_creation_time(task_id: int, session: SessionDep):
     if not task:
         raise HTTPException(status_code=404, detail="Task not found")
     return {"task_id": task.id, "created_at": task.created_at}
+
+
+@router.post("/generate_report")
+async def generate_report(background_tasks: BackgroundTasks, session: SessionDep):
+    """
+    Фоновая задача для генерации отчета.
+    """
+    # Добавляем задачу в фон
+    background_tasks.add_task(make_tasks_report, session)
+    return {"message": "Отчет генерируется в фоновом режиме."}
+
+
+@router.get("/download_report")
+async def download_report():
+    """
+    Позволяет скачать сгенерированный отчет.
+    """
+    filename = "tasks_report.txt"
+
+    # Проверяем, существует ли файл
+    if os.path.exists(filename):
+        return FileResponse(path=filename, media_type='text/plain', filename=filename)
+    else:
+        raise HTTPException(status_code=404, detail="Отчет еще не был сгенерирован.")
