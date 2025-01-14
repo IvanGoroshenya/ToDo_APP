@@ -19,3 +19,9 @@ class STaskId(BaseModel):
 class UserLoginSchema(BaseModel):
     username:str
     password:str
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str
+    is_admin: bool = False

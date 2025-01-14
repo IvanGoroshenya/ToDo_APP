@@ -2343,3 +2343,121 @@
 2025-01-13T20:58:02.103773+0300 INFO Response: 200 for POST http://testserver/tasks/
 2025-01-13T20:58:02.107759+0300 INFO Request to http://testserver/tasks/23 - Method: DELETE - Client IP: testclient
 2025-01-13T20:58:02.119566+0300 INFO Response: 200 for DELETE http://testserver/tasks/23
+2025-01-13T21:22:32.647659+0300 INFO Request to http://127.0.0.1:8004/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:32.674661+0300 INFO Request to http://127.0.0.1:8002/ - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:32.724660+0300 INFO Response: 200 for GET http://127.0.0.1:8002/
+2025-01-13T21:22:32.753660+0300 INFO Request to http://127.0.0.1:8001/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:32.768663+0300 INFO Request to http://127.0.0.1:8001/tasks/ - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:32.810666+0300 INFO Response: 200 for GET http://127.0.0.1:8004/docs
+2025-01-13T21:22:32.812660+0300 INFO Request to http://127.0.0.1:8008/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:32.980666+0300 INFO Response: 200 for POST http://127.0.0.1:8004/tasks/
+2025-01-13T21:22:32.992667+0300 INFO Request to http://127.0.0.1:8008/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:32.995665+0300 INFO Request to http://127.0.0.1:8008/ - Method: GET - Client IP: 127.0.0.1
+2025-01-13T21:22:33.008666+0300 INFO Response: 200 for GET http://127.0.0.1:8001/docs
+2025-01-13T21:22:33.021667+0300 INFO Response: 200 for GET http://127.0.0.1:8008/docs
+2025-01-13T21:22:33.023670+0300 INFO Response: 200 for GET http://127.0.0.1:8008/docs
+2025-01-13T21:22:33.024672+0300 INFO Response: 200 for GET http://127.0.0.1:8008/
+2025-01-13T21:22:33.074659+0300 INFO Response: 200 for GET http://127.0.0.1:8001/tasks/
+2025-01-13T21:22:33.081663+0300 INFO Response: 200 for POST http://127.0.0.1:8001/tasks/
+2025-01-13T21:22:33.094663+0300 INFO Response: 200 for POST http://127.0.0.1:8008/tasks/
+2025-01-14T20:05:06.154953+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.155922+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-14T20:05:06.156903+0300 INFO Response: 307 for POST http://testserver/tasks
+2025-01-14T20:05:06.160942+0300 INFO Request to http://testserver/tasks/ - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.160942+0300 DEBUG Request Body: {
+  "name": "Test Task",
+  "description": "This is a test task."
+}
+2025-01-14T20:05:06.205981+0300 INFO Response: 200 for POST http://testserver/tasks/
+2025-01-14T20:05:06.546520+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.546520+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-14T20:05:06.547523+0300 INFO Response: 307 for POST http://testserver/tasks
+2025-01-14T20:05:06.551523+0300 INFO Request to http://testserver/tasks/ - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.551523+0300 DEBUG Request Body: {
+  "name": "Test Task 1",
+  "description": "First test task."
+}
+2025-01-14T20:05:06.568520+0300 INFO Response: 200 for POST http://testserver/tasks/
+2025-01-14T20:05:06.572521+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.572521+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-14T20:05:06.573520+0300 INFO Response: 307 for POST http://testserver/tasks
+2025-01-14T20:05:06.576522+0300 INFO Request to http://testserver/tasks/ - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.576522+0300 DEBUG Request Body: {
+  "name": "Test Task 2",
+  "description": "Second test task."
+}
+2025-01-14T20:05:06.591523+0300 INFO Response: 200 for POST http://testserver/tasks/
+2025-01-14T20:05:06.595519+0300 INFO Request to http://testserver/tasks - Method: GET - Client IP: testclient
+2025-01-14T20:05:06.595519+0300 INFO Response: 307 for GET http://testserver/tasks
+2025-01-14T20:05:06.598519+0300 INFO Request to http://testserver/tasks/ - Method: GET - Client IP: testclient
+2025-01-14T20:05:06.607520+0300 INFO Response: 200 for GET http://testserver/tasks/
+2025-01-14T20:05:06.659519+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.660520+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-14T20:05:06.660520+0300 INFO Response: 307 for POST http://testserver/tasks
+2025-01-14T20:05:06.663520+0300 INFO Request to http://testserver/tasks/ - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.663520+0300 DEBUG Request Body: {
+  "name": "Update Task",
+  "description": "Updated description"
+}
+2025-01-14T20:05:06.688528+0300 INFO Response: 200 for POST http://testserver/tasks/
+2025-01-14T20:05:06.701527+0300 INFO Request to http://testserver/tasks/29 - Method: PUT - Client IP: testclient
+2025-01-14T20:05:06.702527+0300 DEBUG Request Body: {
+  "name": "Updated Task",
+  "description": "This is an updated task description."
+}
+2025-01-14T20:05:06.774524+0300 INFO Response: 200 for PUT http://testserver/tasks/29
+2025-01-14T20:05:06.795568+0300 INFO Request to http://testserver/tasks - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.796525+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-14T20:05:06.796525+0300 INFO Response: 307 for POST http://testserver/tasks
+2025-01-14T20:05:06.800528+0300 INFO Request to http://testserver/tasks/ - Method: POST - Client IP: testclient
+2025-01-14T20:05:06.800528+0300 DEBUG Request Body: {
+  "name": "Delete Task",
+  "description": "This task will be deleted"
+}
+2025-01-14T20:05:06.823519+0300 INFO Response: 200 for POST http://testserver/tasks/
+2025-01-14T20:05:06.827520+0300 INFO Request to http://testserver/tasks/30 - Method: DELETE - Client IP: testclient
+2025-01-14T20:05:06.851523+0300 INFO Response: 200 for DELETE http://testserver/tasks/30
+2025-01-14T20:13:06.209872+0300 INFO Request to http://127.0.0.1:8008/ - Method: GET - Client IP: 127.0.0.1
+2025-01-14T20:13:06.212870+0300 INFO Response: 200 for GET http://127.0.0.1:8008/
+2025-01-14T20:13:06.334879+0300 INFO Request to http://127.0.0.1:8008/image - Method: GET - Client IP: 127.0.0.1
+2025-01-14T20:13:06.490871+0300 INFO Response: 200 for GET http://127.0.0.1:8008/image
+2025-01-14T20:13:06.531870+0300 INFO Request to http://127.0.0.1:8008/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-14T20:13:06.533872+0300 INFO Response: 404 for GET http://127.0.0.1:8008/favicon.ico
+2025-01-14T20:13:08.548725+0300 INFO Request to http://127.0.0.1:8008/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-14T20:13:08.549721+0300 INFO Response: 200 for GET http://127.0.0.1:8008/docs
+2025-01-14T20:13:08.827048+0300 INFO Request to http://127.0.0.1:8008/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-14T20:13:08.840050+0300 INFO Response: 200 for GET http://127.0.0.1:8008/openapi.json
+2025-01-14T21:03:59.466254+0300 INFO Request to http://127.0.0.1:8008/ - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:03:59.520259+0300 INFO Response: 200 for GET http://127.0.0.1:8008/
+2025-01-14T21:03:59.927420+0300 INFO Request to http://127.0.0.1:8008/favicon.ico - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:03:59.929270+0300 INFO Response: 404 for GET http://127.0.0.1:8008/favicon.ico
+2025-01-14T21:04:01.536109+0300 INFO Request to http://127.0.0.1:8008/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:04:01.537097+0300 INFO Response: 200 for GET http://127.0.0.1:8008/docs
+2025-01-14T21:04:01.768667+0300 INFO Request to http://127.0.0.1:8008/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:04:01.784667+0300 INFO Response: 200 for GET http://127.0.0.1:8008/openapi.json
+2025-01-14T21:05:49.281723+0300 INFO Request to http://127.0.0.1:8008/tasks/create_admin?username=admin_user&password=secure_password - Method: POST - Client IP: 127.0.0.1
+2025-01-14T21:05:49.282335+0300 DEBUG Query Params: {'username': 'admin_user', 'password': 'secure_password'}
+2025-01-14T21:05:49.614233+0300 INFO Response: 200 for POST http://127.0.0.1:8008/tasks/create_admin?username=admin_user&password=secure_password
+2025-01-14T21:36:11.037965+0300 INFO Request to http://127.0.0.1:8008/ - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:36:11.038950+0300 INFO Response: 200 for GET http://127.0.0.1:8008/
+2025-01-14T21:36:12.410992+0300 INFO Request to http://127.0.0.1:8008/docs - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:36:12.411988+0300 INFO Response: 200 for GET http://127.0.0.1:8008/docs
+2025-01-14T21:36:12.711990+0300 INFO Request to http://127.0.0.1:8008/openapi.json - Method: GET - Client IP: 127.0.0.1
+2025-01-14T21:36:12.730987+0300 INFO Response: 200 for GET http://127.0.0.1:8008/openapi.json
+2025-01-14T21:36:18.610991+0300 INFO Request to http://127.0.0.1:8008/tasks/create_task_admin - Method: POST - Client IP: 127.0.0.1
+2025-01-14T21:36:18.612987+0300 INFO Response: 401 for POST http://127.0.0.1:8008/tasks/create_task_admin

@@ -1,5 +1,7 @@
 from sqlalchemy.ext.asyncio import AsyncSession
-from models import TodoORM
+
+from auth.security import pwd_context
+from models import TodoORM, User
 from sqlalchemy.future import select
 
 # Создание задачи
@@ -52,3 +54,15 @@ async def get_task_by_id(session: AsyncSession, task_id: int):
     # Извлечение первой задачи из результатов
     task = result.scalars().first()
     return task
+
+
+
+async def create_admin(session: AsyncSession, username: str, password: str):
+    # Хэшируем пароль
+    hashed_password = pwd_context.hash(password)
+    # Создаём пользователя с правами администратора
+    new_admin = User(username=username, hashed_password=hashed_password, is_admin=True)
+    session.add(new_admin)
+    await session.commit()
+    await session.refresh(new_admin)
+    return new_admin

@@ -4,12 +4,15 @@ from celery.result import AsyncResult
 from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse
+
+from auth.auth import admin_required
 from backgrounds.background_tasks import  make_tasks_report
+from models import User
 from schemas import STaskADD
 from dependencies import SessionDep
 # from celery_tasks.tasks import create_task_async
 from fastapi import Request
-from crud import create_task, get_all_tasks, update_task, delete_task, get_task_by_id
+from crud import create_task, get_all_tasks, update_task, delete_task, get_task_by_id, create_admin
 
 # from celery_tasks.tasks import create_task_async
 
@@ -103,3 +106,25 @@ async def download_report():
         return FileResponse(path=filename, media_type='text/plain', filename=filename)
     else:
         raise HTTPException(status_code=404, detail="Отчет еще не был сгенерирован.")
+
+
+
+
+@router.post("/create_admin")
+async def create_admin_router(username: str, password: str, session: SessionDep):
+
+    try:
+        new_admin = await create_admin(session, username, password)
+        return {
+            "ok": True,
+            "admin_id": new_admin.id,
+            "username": new_admin.username,
+            "is_admin": new_admin.is_admin,
+        }
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@router.post("/create_task_admin")
+async def create_task_for_admin(current_user: User = Depends(admin_required)):
+    # Создание задачи, доступно только администраторам
+    return {"message": "Задача для админа"}

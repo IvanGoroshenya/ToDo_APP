@@ -5,10 +5,7 @@ from dependencies import SessionDep
 
 
 async def make_tasks_report(session: SessionDep):
-    """
-    Позволяет скачать сгенерированный отчет с задачами.
-    Записывает задачи в текстовый файл.
-    """
+
     tasks = await get_all_tasks(session)
 
     # Создание текстового файла для отчета
