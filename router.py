@@ -1,20 +1,32 @@
 import os
 
+from authx import AuthXConfig, AuthX
 from celery.result import AsyncResult
-from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends
+from fastapi import APIRouter, HTTPException, BackgroundTasks, Depends, Response
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse
+from sqlalchemy.ext.asyncio import AsyncSession
 
-from auth.auth import admin_required
+from auth.auth import authenticate_user
 from backgrounds.background_tasks import  make_tasks_report
+from database import get_session
 from models import User
-from schemas import STaskADD
+from schemas import STaskADD, UserLoginSchema
 from dependencies import SessionDep
 # from celery_tasks.tasks import create_task_async
 from fastapi import Request
 from crud import create_task, get_all_tasks, update_task, delete_task, get_task_by_id, create_admin
 
 # from celery_tasks.tasks import create_task_async
+
+
+config = AuthXConfig()
+config.JWT_SECRET_KEY = "SECRET_KEY"
+config.JWT_ACCESS_COOKIE_NAME = "my_token"
+config.JWT_TOKEN_LOCATION = ['cookies']
+security = AuthX(config=config)
+
+
 
 
 
@@ -124,7 +136,16 @@ async def create_admin_router(username: str, password: str, session: SessionDep)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
-@router.post("/create_task_admin")
-async def create_task_for_admin(current_user: User = Depends(admin_required)):
-    # Создание задачи, доступно только администраторам
-    return {"message": "Задача для админа"}
+
+
+
+@router.post("/tasks/login_for_admin")
+async def login_for_admin(credentials: UserLoginSchema, session: SessionDep):
+    # Проверяем данные для аутентификации
+    user = await authenticate_user(session, credentials.username, credentials.password)
+    if not user:
+        raise HTTPException(status_code=401, detail="Incorrect username or password")
+
+    # Генерируем JWT-токен, передавая строку в sub
+    token = security.create_access_token(uid=str(user.id))  # Преобразование id в строку
+    return {"access_token": token}

@@ -135,6 +135,8 @@ async def get_image():
     return FileResponse(IMAGE_PATH)
 
 
+
+
 @app.post('/login')
 def login(credentials: UserLoginSchema, responce: Response):
     if credentials.username == 'test' and credentials.password == 'test':

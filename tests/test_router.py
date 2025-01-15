@@ -106,3 +106,20 @@ async def test_delete_task(client: TestClient, db_session: AsyncSession):
     result = await db_session.execute(select(TodoORM).filter(TodoORM.id == task_id))
     task = result.scalars().first()
     assert task is None
+
+
+
+@pytest.mark.asyncio
+async def test_create_admin():
+    # Подготовка данных администратора
+    data = {"username": "test_admin", "password": "secure_password"}
+
+    # Отправка POST-запроса
+    response = client.post("/tasks/create_admin", json=data)
+    assert response.status_code == 200
+
+    # Проверка ответа
+    response_data = response.json()
+    assert response_data["ok"] is True
+    assert response_data["username"] == "test_admin"
+    assert response_data["is_admin"] is True
