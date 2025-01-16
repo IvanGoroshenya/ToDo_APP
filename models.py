@@ -25,3 +25,5 @@ class User(Base):
     username: Mapped[str] = mapped_column(unique=True, index=True, nullable=False)
     hashed_password: Mapped[str] = mapped_column(nullable=False)
     is_admin: Mapped[bool] = mapped_column(default=False)
+    access_token: Mapped[Optional[str]] = mapped_column(nullable=True)
+

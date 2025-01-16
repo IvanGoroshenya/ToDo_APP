@@ -50,26 +50,6 @@ async def get_task(request: Request, session: SessionDep):
 #################################################################################################################################
 
 
-##############################  SELERY
-# @router.post("/")
-# async def add_task(data: STaskADD, session: SessionDep):
-#     # Отправляем задачу в очередь Celery для фоново обработки
-#     task = create_task_async.apply_async(args=[session, data.name, data.description])
-#     return {"ok": True, "task_id": task.id}  # Возвращаем ID задачи для отслеживания статуса
-#
-# # Получение статуса задачи
-# @router.get("/status/{task_id}")
-# async def get_task_status(task_id: str):
-#     # Получаем статус задачи из Celery
-#     task_result = AsyncResult(task_id)
-#     if task_result.state == 'PENDING':
-#         return {"status": "Task is still processing"}
-#     if task_result.state == 'SUCCESS':
-#         return {"status": "Task completed", "result": task_result.result}
-#     if task_result.state == 'FAILURE':
-#         return {"status": "Task failed", "error": str(task_result.result)}
-#     return {"status": task_result.state}
-
 
 # Обновление задачи
 @router.put("/{task_id}")
@@ -87,7 +67,7 @@ async def delete_task_route(task_id: int, session: SessionDep):
         raise HTTPException(status_code=404, detail="Task not found")
     return {"ok": True, "deleted_task_id": deleted_task_id}
 
-# Удаление задачи
+
 @router.get("/{task_id}")
 async def get_task_creation_time(task_id: int, session: SessionDep):
     task = await get_task_by_id(session,task_id)
@@ -127,11 +107,19 @@ async def create_admin_router(username: str, password: str, session: SessionDep)
 
     try:
         new_admin = await create_admin(session, username, password)
+        # Генерируем JWT-токен, передавая строку в sub
+        token = security.create_access_token(uid=str(new_admin.id))  # Преобразование id в строку
+
+        new_admin.access_token = token
+        session.add(new_admin)
+        await session.commit()
+
         return {
             "ok": True,
             "admin_id": new_admin.id,
             "username": new_admin.username,
             "is_admin": new_admin.is_admin,
+            "access_token": token
         }
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
@@ -141,11 +129,24 @@ async def create_admin_router(username: str, password: str, session: SessionDep)
 
 @router.post("/tasks/login_for_admin")
 async def login_for_admin(credentials: UserLoginSchema, session: SessionDep):
-    # Проверяем данные для аутентификации
+    #Проверяем данные для аутентификации
     user = await authenticate_user(session, credentials.username, credentials.password)
     if not user:
         raise HTTPException(status_code=401, detail="Incorrect username or password")
 
-    # Генерируем JWT-токен, передавая строку в sub
-    token = security.create_access_token(uid=str(user.id))  # Преобразование id в строку
-    return {"access_token": token}
+    return {"Yes you are admin !!!"}
+
+#
+# @router.post("/tasks/login_for_admin")
+# async def login_for_admin(credentials: UserLoginSchema, responce:Response):
+#     if credentials.username == 'admin' and credentials.password == 'admin' :
+#         token = security.create_access_token(uid='1111')
+#         responce.set_cookie(config.JWT_ACCESS_COOKIE_NAME,token)
+#         return {'access_token': token}
+#     raise HTTPException(status_code=401, detail='Incorrect username or password')
+#
+
+
+
+
+

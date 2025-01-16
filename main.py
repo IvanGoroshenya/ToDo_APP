@@ -136,8 +136,8 @@ async def get_image():
 
 
 
-
-@app.post('/login')
+# Вход по токену
+@app.post('/login_for_SuperAdmin')
 def login(credentials: UserLoginSchema, responce: Response):
     if credentials.username == 'test' and credentials.password == 'test':
         token = security.create_access_token(uid='1111')
@@ -145,7 +145,7 @@ def login(credentials: UserLoginSchema, responce: Response):
         return {'access_token': token}
     raise HTTPException(status_code=401, detail='Incorrect username or password')
 
-@app.get('/protected',dependencies=[Depends(security.access_token_required)])
+@app.get('/protected_SuperAdmina',dependencies=[Depends(security.access_token_required)])
 def protected():
     return {'data':'Secret'}
 
